@@ -128,7 +128,7 @@ h4 {
 /* カラムスタイル */
 .col-three {
     display: flex;
-    flex: 1 1 0;
+    flex: 1;
 }
 .col {
     box-sizing: border-box;
@@ -141,7 +141,7 @@ h4 {
     flex: 0 1 15em;
 }
 .col-three .col-content {
-    flex: 1 1 0;
+    flex: 1;
 }
 .col-three .col-aside {
     flex: 0 1 20em;
@@ -154,7 +154,7 @@ h4 {
     order: 1;
 }
 .col-two .col-content {
-    flex: 1 1 0;
+    flex: 1;
 }
 
 /* ページスタイル */
@@ -285,7 +285,7 @@ h4 {
     margin-top: 1em;
 }
 .callout-title {
-    flex: 1 1 0;
+    flex: 1;
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
@@ -447,4 +447,68 @@ h4 {
     font-size: 0.8em;
     margin-top: 3em;
     padding-top: 2em;
+}
+
+@media (max-width: 800px) {
+    html {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    /* ヘッダースタイル */
+    .header-nav {
+        padding: 2vh 1em 0 0;
+    }
+    .header-nav > li {
+        margin-left: 0.25em;
+    }
+    .header-nav > li ~ li {
+        padding-left: 0.25em;
+    }
+    .nav-links a {
+        font-size: 3.25vw;
+    }
+    .header-logo {
+        left: auto;
+    }
+    /* homeページスタイル */
+    .home-callout {
+        flex-direction: column;
+    }
+    .callout-copy {
+        flex: 1;
+    }
+    .bio-box {
+        float: none;
+        font-size: 1.3rem;
+        width: auto;
+    }
+    /* ブログスタイル */
+    .post-aside {
+        display: none;
+    }
+    /* ギャラリースタイル */
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery .col {
+        padding: 1em;
+    }
+    .gallery .gallery-thumbs {
+        flex: 1;
+        height: auto;
+        white-space: nowrap;
+        width: 100vw;
+    }
+    .gallery-thumbs > div {
+        display: inline-block;
+    }
+    .gallery-thumbs img {
+        height: 7vh;
+        margin: 0 10px 0 0;
+        width: auto;
+    }
+    .gallery .gallery-info {
+        flex: 1;
+    }
 }
